@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A804B7DE-AB2D-4F56-A02F-8EA83ED7F4EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyectoIII</RootNamespace>
+    <AssemblyName>proyectoIII</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABB.cs" />
+    <Compile Include="ABB1.cs" />
+    <Compile Include="CGrafo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArboles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArboles.Designer.cs">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBubble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBubble.Designer.cs">
+      <DependentUpon>FrmBubble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCounting.Designer.cs">
+      <DependentUpon>frmCounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrafos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrafos.Designer.cs">
+      <DependentUpon>frmGrafos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsercion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsercion.Designer.cs">
+      <DependentUpon>frmInsercion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdenamientoABB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdenamientoABB.Designer.cs">
+      <DependentUpon>frmOrdenamientoABB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCircular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCircular.Designer.cs">
+      <DependentUpon>frmListaCircular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoble.Designer.cs">
+      <DependentUpon>FrmListadoble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelection.Designer.cs">
+      <DependentUpon>frmSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafo.cs" />
+    <Compile Include="ListaCircular.cs" />
+    <Compile Include="ListaDoble.cs" />
+    <Compile Include="Nodo.cs" />
+    <Compile Include="Nodo2.cs" />
+    <Compile Include="NodoABB.cs" />
+    <Compile Include="NodoArbol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArboles.resx">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBubble.resx">
+      <DependentUpon>FrmBubble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCounting.resx">
+      <DependentUpon>frmCounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafos.resx">
+      <DependentUpon>frmGrafos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsercion.resx">
+      <DependentUpon>frmInsercion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdenamientoABB.resx">
+      <DependentUpon>frmOrdenamientoABB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCircular.resx">
+      <DependentUpon>frmListaCircular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoble.resx">
+      <DependentUpon>FrmListadoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelection.resx">
+      <DependentUpon>frmSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
