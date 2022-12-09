@@ -48,7 +48,11 @@
   <ItemGroup>
     <Compile Include="ABB.cs" />
     <Compile Include="ABB1.cs" />
+    <Compile Include="Bicola.cs" />
     <Compile Include="CGrafo.cs" />
+    <Compile Include="Cola.cs" />
+    <Compile Include="Cola2.cs" />
+    <Compile Include="ColasD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,11 +65,35 @@
     <Compile Include="frmArboles.Designer.cs">
       <DependentUpon>frmArboles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBicola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBicola.Designer.cs">
+      <DependentUpon>frmBicola.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBubble.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBubble.Designer.cs">
       <DependentUpon>FrmBubble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColacircular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColacircular.Designer.cs">
+      <DependentUpon>frmColacircular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColaDinamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColaDinamica.Designer.cs">
+      <DependentUpon>frmColaDinamica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColas.Designer.cs">
+      <DependentUpon>frmColas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCounting.cs">
       <SubType>Form</SubType>
@@ -85,6 +113,24 @@
     <Compile Include="frmInsercion.Designer.cs">
       <DependentUpon>frmInsercion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLdobleCircular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLdobleCircular.Designer.cs">
+      <DependentUpon>frmLdobleCircular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaS.Designer.cs">
+      <DependentUpon>frmListaS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMerge.Designer.cs">
+      <DependentUpon>frmMerge.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOrdenamientoABB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,19 +149,52 @@
     <Compile Include="FrmListadoble.Designer.cs">
       <DependentUpon>FrmListadoble.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilas.Designer.cs">
+      <DependentUpon>frmPilas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuicksort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuicksort.Designer.cs">
+      <DependentUpon>frmQuicksort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRadix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRadix.Designer.cs">
+      <DependentUpon>frmRadix.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSelection.Designer.cs">
       <DependentUpon>frmSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShell.Designer.cs">
+      <DependentUpon>frmShell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grafo.cs" />
+    <Compile Include="Lista.cs" />
     <Compile Include="ListaCircular.cs" />
     <Compile Include="ListaDoble.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="Nodo2.cs" />
     <Compile Include="NodoABB.cs" />
     <Compile Include="NodoArbol.cs" />
+    <Compile Include="NodoBicola.cs" />
+    <Compile Include="NodoCcirc.cs" />
+    <Compile Include="NodoCola.cs" />
+    <Compile Include="NodoD.cs" />
+    <Compile Include="NodoJ.cs" />
+    <Compile Include="NodoS.cs" />
+    <Compile Include="Operaciones.cs" />
+    <Compile Include="Operacion_Mezcla.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -126,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBubble.resx">
       <DependentUpon>FrmBubble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColas.resx">
+      <DependentUpon>frmColas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCounting.resx">
       <DependentUpon>frmCounting.cs</DependentUpon>
@@ -144,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoble.resx">
       <DependentUpon>FrmListadoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilas.resx">
+      <DependentUpon>frmPilas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuicksort.resx">
+      <DependentUpon>frmQuicksort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelection.resx">
       <DependentUpon>frmSelection.cs</DependentUpon>

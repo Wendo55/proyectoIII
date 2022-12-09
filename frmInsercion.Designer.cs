@@ -39,8 +39,6 @@
             this.tbArregloO = new System.Windows.Forms.TextBox();
             this.tbArregloC = new System.Windows.Forms.TextBox();
             this.tbIntercambios = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTamaño
@@ -90,7 +88,7 @@
             // LbComparaciones
             // 
             this.LbComparaciones.AutoSize = true;
-            this.LbComparaciones.Location = new System.Drawing.Point(42, 219);
+            this.LbComparaciones.Location = new System.Drawing.Point(27, 104);
             this.LbComparaciones.Name = "LbComparaciones";
             this.LbComparaciones.Size = new System.Drawing.Size(80, 13);
             this.LbComparaciones.TabIndex = 34;
@@ -99,7 +97,7 @@
             // LbIntercambios
             // 
             this.LbIntercambios.AutoSize = true;
-            this.LbIntercambios.Location = new System.Drawing.Point(42, 245);
+            this.LbIntercambios.Location = new System.Drawing.Point(27, 130);
             this.LbIntercambios.Name = "LbIntercambios";
             this.LbIntercambios.Size = new System.Drawing.Size(67, 13);
             this.LbIntercambios.TabIndex = 35;
@@ -107,7 +105,7 @@
             // 
             // tbComparaciones
             // 
-            this.tbComparaciones.Location = new System.Drawing.Point(135, 210);
+            this.tbComparaciones.Location = new System.Drawing.Point(120, 95);
             this.tbComparaciones.Name = "tbComparaciones";
             this.tbComparaciones.Size = new System.Drawing.Size(62, 20);
             this.tbComparaciones.TabIndex = 36;
@@ -128,35 +126,16 @@
             // 
             // tbIntercambios
             // 
-            this.tbIntercambios.Location = new System.Drawing.Point(135, 236);
+            this.tbIntercambios.Location = new System.Drawing.Point(120, 121);
             this.tbIntercambios.Name = "tbIntercambios";
             this.tbIntercambios.Size = new System.Drawing.Size(62, 20);
             this.tbIntercambios.TabIndex = 40;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(120, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(383, 20);
-            this.textBox1.TabIndex = 41;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(509, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Crear arreglo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // frmInsercion
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tbIntercambios);
             this.Controls.Add(this.tbArregloC);
             this.Controls.Add(this.tbArregloO);
@@ -168,7 +147,7 @@
             this.Controls.Add(this.txtTamaño);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCrear);
-            this.Name = "frmInsercion";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,7 +166,5 @@
         private System.Windows.Forms.TextBox tbArregloO;
         private System.Windows.Forms.TextBox tbArregloC;
         private System.Windows.Forms.TextBox tbIntercambios;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGrafos));
             this.pbGrafo = new System.Windows.Forms.PictureBox();
             this.gbVertices = new System.Windows.Forms.GroupBox();
             this.btEliminarVertice = new System.Windows.Forms.Button();
@@ -51,10 +52,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbIndicacion = new System.Windows.Forms.ToolStripStatusLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnclose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafo)).BeginInit();
             this.gbVertices.SuspendLayout();
             this.gbArcos.SuspendLayout();
             this.gbGrafo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnclose)).BeginInit();
             this.SuspendLayout();
             // 
             // pbGrafo
@@ -330,12 +333,26 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Grafos";
             // 
+            // btnclose
+            // 
+            this.btnclose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnclose.BackgroundImage")));
+            this.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnclose.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnclose.Location = new System.Drawing.Point(827, 12);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(25, 25);
+            this.btnclose.TabIndex = 31;
+            this.btnclose.TabStop = false;
+            this.btnclose.UseWaitCursor = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
             // frmGrafos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(864, 523);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.gbGrafo);
             this.Controls.Add(this.gbArcos);
@@ -353,6 +370,7 @@
             this.gbArcos.ResumeLayout(false);
             this.gbArcos.PerformLayout();
             this.gbGrafo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnclose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,5 +401,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbTipoGrafo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox btnclose;
     }
 }

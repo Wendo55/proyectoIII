@@ -40,10 +40,10 @@ namespace proyectoIII
 
 
         // VARIABLES AUXILIARES PARA DIBUJAR GRAFO
-        //Rectangle R;
-        //Brush pincel;
-        //Point P1, P2, P3;
-        //StringFormat formato = new StringFormat();
+        Rectangle R;
+        Brush pincel;
+        Point P1, P2, P3;
+        StringFormat formato = new StringFormat();
 
         // FIN VARIABLES GLOBALES __________________________________________________________
 
@@ -63,7 +63,7 @@ namespace proyectoIII
             {
                 lbArcos.Items.Add(Arco.Key);
             }
-            //DibujarGrafo(G);
+            DibujarGrafo(G);
         }
         private void frmGrafos_Load(object sender, EventArgs e)
         {
@@ -71,8 +71,8 @@ namespace proyectoIII
             _agregandoNodo = false;
             g = pbGrafo.CreateGraphics();
             this.DoubleBuffered = true;
-            //formato.Alignment = StringAlignment.Center;
-            //formato.LineAlignment = StringAlignment.Center;
+            formato.Alignment = StringAlignment.Center;
+            formato.LineAlignment = StringAlignment.Center;
             cbTipoGrafo.SelectedIndex = 0;
             this.ConfigurarFlecha();
 
@@ -99,7 +99,7 @@ namespace proyectoIII
             string vertice = txAgregarVertice.Text.Trim();
             if (vertice == string.Empty) MessageBox.Show("Debe ingresar el nombre del vértice.");
             else
-                if (MiGrafo.ExisteVertice(vertice));
+                if (MiGrafo.ExisteVertice(vertice)) ;
             else
             {
                 _agregandoNodo = true;
@@ -119,66 +119,70 @@ namespace proyectoIII
             if (_agregandoNodo)
             {
                 _posicionNodo = new Point(e.X, e.Y);
-                //DibujarGrafo(MiGrafo);
+                DibujarGrafo(MiGrafo);
             }
         }
-        //private void DibujarGrafo(Grafo grafo, bool BuscarVertice = false, string VerticeBuscado = "", Queue<string> Rec = null)
-        //{
-        //    g.Clear(Color.White);
-        //    foreach (KeyValuePair<string, Point> Vertice in grafo.Vertices)
-        //    {
-        //        R = new Rectangle(Vertice.Value, Tamaño);
-        //        g.DrawEllipse(Lapiz, R);
-        //        g.FillEllipse(((BuscarVertice && Vertice.Key == VerticeBuscado) || (Rec != null && Rec.Contains(Vertice.Key))) ? PincelNodoBuscado : Pincel, R);
-        //        pincel = ((BuscarVertice && Vertice.Key == VerticeBuscado) ? PincelFuenteNodoBuscado : PincelFuente);
-        //        g.DrawString(Vertice.Key, Fuente, pincel, Vertice.Value + new Size(20, 20), formato);
-        //    }
-        //    foreach (KeyValuePair<string, int> Arco in grafo.Arcos)
-        //    {
-        //        try
-        //        {
-        //            string[] nombresVertices = Arco.Key.Split('_');
-        //            P1 = MiGrafo.Vertices[nombresVertices[0]] + new Size(20, 20);
-        //            P2 = MiGrafo.Vertices[nombresVertices[1]] + new Size(20, 20);
-        //            if (P1.X < P2.X)
-        //            {
-        //                P1 += new Size(14, 0);
-        //                P2 -= new Size(14, 0);
-        //            }
-        //            else if (P2.X < P1.X)
-        //            {
-        //                P2 += new Size(14, 0);
-        //                P1 -= new Size(14, 0);
-        //            }
-        //            if (P1.Y < P2.Y)
-        //            {
-        //                P1 += new Size(0, 14);
-        //                P2 -= new Size(0, 14);
-        //            }
-        //            else
-        //            {
-        //                P2 += new Size(0, 14);
-        //                P1 -= new Size(0, 14);
-        //            }
-        //            P3 = MidPoint(P1, P2);
-        //            g.DrawLine(LapizArco, P1, P2);
-        //            R = new Rectangle(P3 - new Size(12, 10), new Size(25, 20));
+        private void DibujarGrafo(Grafo grafo, bool BuscarVertice = false, string VerticeBuscado = "", Queue<string> Rec = null)
+        {
+            if (g == null)
+            {
+                return;
+            }
+            g.Clear(Color.White);
+            foreach (KeyValuePair<string, Point> Vertice in grafo.Vertices)
+            {
+                R = new Rectangle(Vertice.Value, Tamaño);
+                g.DrawEllipse(Lapiz, R);
+                g.FillEllipse(((BuscarVertice && Vertice.Key == VerticeBuscado) || (Rec != null && Rec.Contains(Vertice.Key))) ? PincelNodoBuscado : Pincel, R);
+                pincel = ((BuscarVertice && Vertice.Key == VerticeBuscado) ? PincelFuenteNodoBuscado : PincelFuente);
+                g.DrawString(Vertice.Key, Fuente, pincel, Vertice.Value + new Size(20, 20), formato);
+            }
+            foreach (KeyValuePair<string, int> Arco in grafo.Arcos)
+            {
+                try
+                {
+                    string[] nombresVertices = Arco.Key.Split('_');
+                    P1 = MiGrafo.Vertices[nombresVertices[0]] + new Size(20, 20);
+                    P2 = MiGrafo.Vertices[nombresVertices[1]] + new Size(20, 20);
+                    if (P1.X < P2.X)
+                    {
+                        P1 += new Size(14, 0);
+                        P2 -= new Size(14, 0);
+                    }
+                    else if (P2.X < P1.X)
+                    {
+                        P2 += new Size(14, 0);
+                        P1 -= new Size(14, 0);
+                    }
+                    if (P1.Y < P2.Y)
+                    {
+                        P1 += new Size(0, 14);
+                        P2 -= new Size(0, 14);
+                    }
+                    else
+                    {
+                        P2 += new Size(0, 14);
+                        P1 -= new Size(0, 14);
+                    }
+                    P3 = MidPoint(P1, P2);
+                    g.DrawLine(LapizArco, P1, P2);
+                    R = new Rectangle(P3 - new Size(12, 10), new Size(25, 20));
 
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show(ex.Message);
-        //        }
-        //    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
-        //    if (_agregandoNodo)
-        //    {
-        //        R = new Rectangle(_posicionNodo, Tamaño);
-        //        g.DrawEllipse(Lapiz, R);
-        //        g.FillEllipse(Pincel, R);
-        //        g.DrawString(_nombreNodo, Fuente, PincelFuente, _posicionNodo + new Size(20, 20), formato);
-        //    }
-        //}
+            if (_agregandoNodo)
+            {
+                R = new Rectangle(_posicionNodo, Tamaño);
+                g.DrawEllipse(Lapiz, R);
+                g.FillEllipse(Pincel, R);
+                g.DrawString(_nombreNodo, Fuente, PincelFuente, _posicionNodo + new Size(20, 20), formato);
+            }
+        }
         private static Point Punto23(Point P1, Point P2)
         {
 
@@ -290,21 +294,26 @@ namespace proyectoIII
                 MessageBox.Show("No existen arcos en el grafo.");
             }
         }
-        //private void frmGrafos_SizeChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.DibujarGrafo(MiGrafo);
-        //    }
-        //    catch (Exception)
-        //    {
-        //    }
+        private void frmGrafos_SizeChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.DibujarGrafo(MiGrafo);
+            }
+            catch (Exception)
+            {
+            }
 
-        //}
+        }
 
         private void nuPeso_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void cbTipoGrafo_SelectedIndexChanged(object sender, EventArgs e)

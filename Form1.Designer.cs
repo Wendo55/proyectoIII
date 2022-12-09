@@ -50,6 +50,7 @@
             this.btnGrafos = new System.Windows.Forms.Button();
             this.btnArboles = new System.Windows.Forms.Button();
             this.btnSelection = new System.Windows.Forms.Button();
+            this.btnORapido = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnclose)).BeginInit();
@@ -146,8 +147,9 @@
             this.btnCasilleros.Name = "btnCasilleros";
             this.btnCasilleros.Size = new System.Drawing.Size(318, 40);
             this.btnCasilleros.TabIndex = 16;
-            this.btnCasilleros.Text = "BUCKET SORT";
+            this.btnCasilleros.Text = "SHELLSORT";
             this.btnCasilleros.UseVisualStyleBackColor = false;
+            this.btnCasilleros.Click += new System.EventHandler(this.btnCasilleros_Click_1);
             // 
             // btnInsercion
             // 
@@ -162,7 +164,7 @@
             this.btnInsercion.Name = "btnInsercion";
             this.btnInsercion.Size = new System.Drawing.Size(318, 40);
             this.btnInsercion.TabIndex = 17;
-            this.btnInsercion.Text = "COCKTAIL SORT";
+            this.btnInsercion.Text = "INSERTION SORT";
             this.btnInsercion.UseVisualStyleBackColor = false;
             this.btnInsercion.Click += new System.EventHandler(this.btnInsercion_Click_1);
             // 
@@ -198,6 +200,7 @@
             this.btnMezcla.TabIndex = 19;
             this.btnMezcla.Text = "MERGE SORT";
             this.btnMezcla.UseVisualStyleBackColor = false;
+            this.btnMezcla.Click += new System.EventHandler(this.btnMezcla_Click_1);
             // 
             // btnArbol
             // 
@@ -231,6 +234,7 @@
             this.btnRadix.TabIndex = 21;
             this.btnRadix.Text = "RADIX SORT";
             this.btnRadix.UseVisualStyleBackColor = false;
+            this.btnRadix.Click += new System.EventHandler(this.btnRadix_Click_1);
             // 
             // btnLista
             // 
@@ -385,12 +389,30 @@
             this.btnSelection.UseVisualStyleBackColor = false;
             this.btnSelection.Click += new System.EventHandler(this.btnSelection_Click);
             // 
+            // btnORapido
+            // 
+            this.btnORapido.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnORapido.FlatAppearance.BorderSize = 0;
+            this.btnORapido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnORapido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnORapido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnORapido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnORapido.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnORapido.Location = new System.Drawing.Point(12, 465);
+            this.btnORapido.Name = "btnORapido";
+            this.btnORapido.Size = new System.Drawing.Size(318, 40);
+            this.btnORapido.TabIndex = 31;
+            this.btnORapido.Text = "QUICKSORT";
+            this.btnORapido.UseVisualStyleBackColor = false;
+            this.btnORapido.Click += new System.EventHandler(this.btnORapido_Click);
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(794, 544);
+            this.Controls.Add(this.btnORapido);
             this.Controls.Add(this.btnSelection);
             this.Controls.Add(this.btnArboles);
             this.Controls.Add(this.btnGrafos);
@@ -442,6 +464,7 @@
         private System.Windows.Forms.Button btnGrafos;
         private System.Windows.Forms.Button btnArboles;
         private System.Windows.Forms.Button btnSelection;
+        private System.Windows.Forms.Button btnORapido;
     }
 }
 

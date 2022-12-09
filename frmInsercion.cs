@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace proyectoIII
@@ -27,7 +19,6 @@ namespace proyectoIII
             intercambios = 0;
             tbArregloC.Text = MostrarLista();
             int n = arreglo.Length;
-            int d = 0;  
             for (int i = 1; i < n; ++i)
             {
                 int key = arreglo[i];
@@ -42,7 +33,6 @@ namespace proyectoIII
                 intercambios++;
             }
         }
-      
         public string MostrarLista()
         {
             string numeros = "";
@@ -73,11 +63,6 @@ namespace proyectoIII
             tbArregloO.Text = MostrarLista();
             tbComparaciones.Text = comparaciones + "";
             tbIntercambios.Text = intercambios + "";
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
